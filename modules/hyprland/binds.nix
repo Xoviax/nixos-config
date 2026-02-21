@@ -4,11 +4,9 @@
 
 { ... }: {
   wayland.windowManager.hyprland.settings = {
-    "$mainMod" = "SUPER";
+    # See https://wiki.hypr.land/Configuring/Keywords/
+    "$mainMod" = "SUPER"; # Sets "Windows" key as main modifier
     bind = [
-      # See https://wiki.hypr.land/Configuring/Keywords/
-      "$mainMod = SUPER"; # Sets "Windows" key as main modifier
-
       # Example binds, see https://wiki.hypr.land/Configuring/Binds/ for more
       "bind = $mainMod, RETURN, exec, $terminal";
       "bind = $mainMod, W, killactive";
