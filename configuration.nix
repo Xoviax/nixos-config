@@ -9,7 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ./modules/system/power.nix
-      ./modules/system/boot.nix
+      ./modules/system/boot/boot.nix
     ];
 
   networking.hostName = "haniel-nixos"; # Define your hostname.
