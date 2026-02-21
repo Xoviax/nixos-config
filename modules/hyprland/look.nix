@@ -2,24 +2,37 @@
   wayland.windowManager.hyprland.settings = {
     general = {
       gaps_in = 5;
-      gaps_out = 10;
+      gaps_out = 20;
       border_size = 2;
-      "col.active_border" = "rgba(444444ff)"; # Neutral Dark Gray
-      "col.inactive_border" = "rgba(222222ff)";
+      "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
+      "col.inactive_border" = "rgba(595959aa)";
       layout = "dwindle";
     };
 
     decoration = {
-      rounding = 4; # Subtly rounded corners
-      shadow.enabled = false; # Clean look, saves resources
-      blur.enabled = false;   # Better battery life for the T480
+      rounding = 10;
+      blur = {
+        enabled = true;
+        size = 3;
+        passes = 1;
+      };
+      shadow = {
+        enabled = true;
+        range = 4;
+        render_power = 3;
+        color = "rgba(1a1a1aee)";
+      };
     };
 
     animations = {
       enabled = true;
+      bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
       animation = [
-        "windows, 1, 3, default" # Fast, standard transitions
-        "workspaces, 1, 3, default"
+        "windows, 1, 7, myBezier"
+        "windows_out, 1, 7, default, popin 80%"
+        "border, 1, 10, default"
+        "fade, 1, 7, default"
+        "workspaces, 1, 6, default"
       ];
     };
   };
