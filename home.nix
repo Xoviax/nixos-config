@@ -62,4 +62,6 @@
 
   # Tell Home Manager to start automatically
   programs.home-manager.enable = true;
+
+  services.ssh-agent.enable = true;
 }

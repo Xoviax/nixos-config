@@ -83,8 +83,21 @@
    ll = "ls -l";
    nixconfig = "sudo nvim /etc/nixos/configuration.nix";
    rebuild = "sudo nixos-rebuild switch";
+   flakerebuild = "sudo nixos-rebuild switch --flake .#t480";
    cleanup = "sudo nix-collect-garbage -d";
   };
+
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    stdenv.cc.cc
+    zlib
+    fuse3
+    icu
+    nss
+    openssl
+    curl
+    expat
+  ];
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -114,10 +127,16 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  services.openssh = {
+    enable = true;
+    settings = {
+      PasswordAuthentication = true;
+      PermitRootLogin = "no";
+    };
+  };
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
+  networking.firewall.allowedTCPPorts = [ 22 ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
