@@ -3,7 +3,8 @@
 {
   imports = [
     ./modules/hyprland
-  ]
+  ];
+  
   home.username = "xoviax";
   home.homeDirectory = lib.mkForce "/home/xoviax";
   home.stateVersion = "24.11"; # Don't change this, it's for internal compatibility
