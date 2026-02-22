@@ -21,9 +21,9 @@
     ];
 
     initExtra = ''
+      # Powerlevel10k config
       source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
-      # If you have a .p10k.zsh config file, source it here:
-      # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
     '';
+
   };
 }

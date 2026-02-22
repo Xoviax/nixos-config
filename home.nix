@@ -22,7 +22,9 @@
     pavucontrol
     vscodium
 
-    inputs.gazelle.packages.${pkgs.system}.default
+    # inputs.gazelle.packages.${pkgs.system}.default
+    inputs.gazelle.packages.${pkgs.stdenv.hostPlatform.system}.default
+
   ];
 
   # Let Nix manage Kitty for you
