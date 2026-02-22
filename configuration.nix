@@ -71,10 +71,14 @@
     isNormalUser = true;
     description = "Rayn Yorobe";
     extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.zsh;
     packages = with pkgs; [
     #  thunderbird
     ];
   };
+
+  # Enable Zsh
+  programs.zsh.enable = true;
 
   # Install firefox.
   programs.firefox.enable = true;
