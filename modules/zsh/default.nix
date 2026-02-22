@@ -23,7 +23,11 @@
     initExtra = ''
       # Powerlevel10k config
       source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
+      
+      # Load internal PowerLEVEL10k config if it exists
+      [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
     '';
+
 
   };
 }
