@@ -4,6 +4,7 @@
   imports = [
     ./modules/hyprland
     ./modules/kitty
+    ./modules/zsh 
   ];
   
   home.stateVersion = "24.11"; # Don't change this, it's for internal compatibility
@@ -24,7 +25,10 @@
     inputs.gazelle.packages.${pkgs.system}.default
   ];
 
-  # Tell Home Manager to start automatically
+  # Let Nix manage Kitty for you
+  programs.kitty.enable = true;
+
+
   programs.home-manager.enable = true;
 
   services.ssh-agent.enable = true;
