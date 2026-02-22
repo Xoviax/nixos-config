@@ -79,6 +79,14 @@
   # Install firefox.
   programs.firefox.enable = true;
 
+  fonts.packages = with pkgs; [
+    nerd-fonts.symbols-only
+    nerd-fonts.fira-code
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.hack
+    nerd-fonts.droid-sans-mono
+  ];
+
   programs.bash.shellAliases = {
    ll = "ls -l";
    nixconfig = "sudo nvim /etc/nixos/configuration.nix";

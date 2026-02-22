@@ -9,6 +9,7 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
+    package = null;
     xwayland.enable = true;
     settings = {
       "$terminal" = "kitty";

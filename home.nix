@@ -5,8 +5,6 @@
     ./modules/hyprland
   ];
   
-  home.username = "xoviax";
-  home.homeDirectory = lib.mkForce "/home/xoviax";
   home.stateVersion = "24.11"; # Don't change this, it's for internal compatibility
 
   home.pointerCursor = {
@@ -23,13 +21,6 @@
     rofi
 
     inputs.gazelle.packages.${pkgs.system}.default
-
-    # --- Fonts ---
-    nerd-fonts.symbols-only
-    nerd-fonts.fira-code
-    nerd-fonts.jetbrains-mono
-    nerd-fonts.hack
-    nerd-fonts.droid-sans-mono
   ];
 
   # Let Nix manage Kitty for you
