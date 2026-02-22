@@ -44,7 +44,7 @@
 
       # Special Workspace
       "$mainMod, TAB, togglespecialworkspace, magic"
-      "$mainMod SHIFT, TAB, movespecialworkspace, magic"
+      "$mainMod SHIFT, TAB, movetoworkspace, special:magic"
 
       # Scroll through workspaces with mainMod + mouse wheel
       "$mainMod, mouse_down, workspace, e+1"
