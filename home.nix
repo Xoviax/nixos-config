@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, inputs, ... }:
 
 {
   imports = [
@@ -21,6 +21,8 @@
     kitty
     waybar
     rofi
+
+    inputs.gazelle.packages.${pkgs.system}.default
 
     # --- Fonts ---
     nerd-fonts.symbols-only
