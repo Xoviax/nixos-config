@@ -16,9 +16,10 @@
 
   # Your apps go here
   home.packages = with pkgs; [
-    kitty
     waybar
     rofi
+    pavucontrol
+    vscodium
 
     inputs.gazelle.packages.${pkgs.system}.default
   ];

@@ -17,9 +17,7 @@
       "$menu" = "rofi -show drun";
 
       exec-once = [
-        "nm-applet &"
         "waybar &"
-        "hyprpaper &"
       ];
     };
   };
