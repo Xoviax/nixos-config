@@ -9,12 +9,6 @@
     ./services/hyprpaper/hyprpaper.nix
   ];
 
-  xdg.portal = {
-    enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-    config.common.default = "*";
-  };
-
   wayland.windowManager.hyprland = {
     enable = true;
     package = null;
@@ -26,6 +20,7 @@
 
       exec-once = [
         "waybar &"
+        "hyprpaper"
       ];
     };
   };

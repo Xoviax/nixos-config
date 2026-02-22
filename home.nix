@@ -22,6 +22,9 @@
     pavucontrol
     vscodium
 
+    # Hyprland
+    hyprpaper
+
     # inputs.gazelle.packages.${pkgs.system}.default
     inputs.gazelle.packages.${pkgs.stdenv.hostPlatform.system}.default
 
