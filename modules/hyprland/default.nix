@@ -7,6 +7,12 @@
     ./monitors.nix
   ];
 
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    config.common.default = "*";
+  };
+
   wayland.windowManager.hyprland = {
     enable = true;
     package = null;
