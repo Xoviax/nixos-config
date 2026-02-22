@@ -5,6 +5,8 @@
     ./input.nix
     ./rules.nix
     ./monitors.nix
+
+    ./services/hyprpaper/hyprpaper.nix
   ];
 
   xdg.portal = {
