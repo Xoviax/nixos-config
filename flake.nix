@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    gazelle.url = "github:Zeus-Deus/gazelle-tui";
 
     home-manager = {
       url = "github:nix-community/home-manager";

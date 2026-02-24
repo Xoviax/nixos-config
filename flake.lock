@@ -18,25 +18,6 @@
         "type": "github"
       }
     },
-    "gazelle": {
-      "inputs": {
-        "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs"
-      },
-      "locked": {
-        "lastModified": 1770567990,
-        "narHash": "sha256-8OVUOmF9xmDhst05FdEK0DiCi7/c8AeOoti4Egev4S4=",
-        "owner": "Zeus-Deus",
-        "repo": "gazelle-tui",
-        "rev": "9aad618cc732aeec4bbbfaadd3217e737349fd82",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Zeus-Deus",
-        "repo": "gazelle-tui",
-        "type": "github"
-      }
-    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [

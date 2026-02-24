@@ -13,6 +13,7 @@ in
       "${wallpaper}"
     ];
     wallpaper = [
+      "eDP-1,${wallpaper}"
       ",${wallpaper}"
     ];
    };
