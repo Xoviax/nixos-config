@@ -4,7 +4,9 @@
   imports = [
     ./modules/hyprland
     ./modules/kitty
-    ./modules/zsh 
+    ./modules/zsh
+
+    inputs.caelestia-shell.homeManagerModules.default
   ];
   
   home.stateVersion = "24.11"; # Don't change this, it's for internal compatibility
@@ -46,6 +48,13 @@
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
     };
+  };
+
+  programs.caelestia = {
+    enable = true;
+    shell.enable = true;
+
+    settings.paths.wallpaperDir = "$HOME/Pictures/Wallpapers";
   };
 
   # Let Nix manage Kitty for you
