@@ -21,6 +21,8 @@
     rofi
     pavucontrol
     vscodium
+    mpv
+    vlc
 
     # Hyprland
     hyprpaper
@@ -30,9 +32,24 @@
 
   ];
 
+  # 1. Set the legacy GTK theme
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Adwaita-dark";
+      package = pkgs.gnome-themes-extra;
+    };
+  };
+
+  # 2. Force modern GNOME/Libadwaita apps to use dark mode
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      color-scheme = "prefer-dark";
+    };
+  };
+
   # Let Nix manage Kitty for you
   programs.kitty.enable = true;
-
 
   programs.home-manager.enable = true;
 

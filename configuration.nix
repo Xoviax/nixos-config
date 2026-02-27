@@ -38,6 +38,8 @@
   # Enable Hyprland
   programs.hyprland.enable = true;
 
+  programs.dconf.enable = true;
+
   xdg.portal = {
     enable = true;
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];

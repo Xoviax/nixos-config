@@ -18,9 +18,14 @@
       "$fileManager" = "nautilus";
       "$menu" = "rofi -show drun";
 
+      env = [
+        "GTK_THEME,Adwaita:dark"
+        "XCURSOR_THEME,Adwaita"
+      ];
+
       exec-once = [
         "waybar &"
-        "hyprpaper"
+        "gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'"
       ];
     };
   };
