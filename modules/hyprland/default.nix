@@ -24,8 +24,7 @@
       ];
 
       exec-once = [
-        "waybar &"
-        "gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'"
+        "caelestia-shell"
       ];
     };
   };
