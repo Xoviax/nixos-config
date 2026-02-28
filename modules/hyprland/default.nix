@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, inputs, ... }: {
   imports = [
     ./binds.nix
     ./look.nix
@@ -21,6 +21,8 @@
       env = [
         "GTK_THEME,Adwaita:dark"
         "XCURSOR_THEME,Adwaita"
+
+        "CAELESTIA_HOME,${inputs.caelestia-shell.packages.${pkgs.system}.default}/share/caelestia-shell"
       ];
 
       exec-once = [

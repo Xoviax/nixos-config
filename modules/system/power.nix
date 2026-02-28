@@ -6,7 +6,7 @@
 
   # Enable TLP for advanced ThinkPad battery management
   services.tlp = {
-    enable = true;
+    enable = false;
     settings = {
       # Battery charge thresholds to extend lifespan
       # Stop charging at 80% to prevent wear

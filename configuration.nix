@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, lib, ... }:
 
 {
   imports =
@@ -155,6 +155,8 @@
       PermitRootLogin = "no";
     };
   };
+
+  services.power-profiles-daemon.enable = lib.mkForce true;
 
   # Open ports in the firewall.
   networking.firewall.allowedTCPPorts = [ 22 ];

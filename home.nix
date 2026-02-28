@@ -19,8 +19,13 @@
   };
 
   home.packages = with pkgs; [
+    foot            # The intended terminal
+    rofi            # The intended launcher
+    brightnessctl   # Fixes the brightness slider
+    pamixer         # Fixes the volume slider
+    libnotify       # Required for the shell's OSD notifications
+
     waybar
-    rofi
     pavucontrol
     vscodium
     mpv
@@ -31,7 +36,6 @@
 
     # inputs.gazelle.packages.${pkgs.system}.default
     inputs.gazelle.packages.${pkgs.stdenv.hostPlatform.system}.default
-
   ];
 
   # 1. Set the legacy GTK theme
@@ -52,9 +56,15 @@
 
   programs.caelestia = {
     enable = true;
-    shell.enable = true;
+    cli.enable = true;
+    systemd.enable = true;
+    
+    settings = {
+      apps.terminal = "${pkgs.foot}/bin/foot";
+      apps.launcher = "${pkgs.rofi}/bin/rofi";
 
-    settings.paths.wallpaperDir = "$HOME/Pictures/Wallpapers";
+      paths.wallpaperDir = "$HOME/Pictures/Wallpapers";
+    };
   };
 
   # Let Nix manage Kitty for you
