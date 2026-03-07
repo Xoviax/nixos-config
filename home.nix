@@ -5,8 +5,6 @@
     ./modules/hyprland
     ./modules/kitty
     ./modules/zsh
-
-    inputs.caelestia-shell.homeManagerModules.default
   ];
   
   home.stateVersion = "24.11"; # Don't change this, it's for internal compatibility
@@ -54,20 +52,6 @@
     };
   };
 
-  programs.caelestia = {
-    enable = true;
-    cli.enable = true;
-    systemd.enable = true;
-    
-    settings = {
-      apps.terminal = "${pkgs.foot}/bin/foot";
-      apps.launcher = "${pkgs.rofi}/bin/rofi";
-
-      paths.wallpaperDir = "$HOME/Pictures/Wallpapers";
-    };
-  };
-
-  # Let Nix manage Kitty for you
   programs.kitty.enable = true;
 
   programs.home-manager.enable = true;

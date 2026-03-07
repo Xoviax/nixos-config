@@ -79,9 +79,6 @@
     description = "Rayn Yorobe";
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.zsh;
-    packages = with pkgs; [
-      inputs.caelestia-shell.packages.${pkgs.system}.default
-    ];
   };
 
   # Enable Zsh
@@ -133,8 +130,6 @@
   fastfetch
   btop
   neovim
-
-  inputs.caelestia-shell.packages.${pkgs.system}.default
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
